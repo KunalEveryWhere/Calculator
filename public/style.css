@@ -1,0 +1,193 @@
+.centerized {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #eaebec;
+}
+.blinking {
+  animation: blinkingText 1.2s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: #000;
+  }
+  49% {
+    color: #000;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: #000;
+  }
+}
+.container {
+  width: 400px;
+  margin: auto;
+}
+
+.calc-body {
+  width: 275px;
+  margin: auto;
+  min-height: 400px;
+  /*border: solid 1px #3a4655;*/
+  border: solid 1px #ffffff;
+  box-shadow: 0 8px 50px -7px black;
+}
+
+.calc-screen {
+  background: #ffffff;
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+}
+
+.calc-operation {
+  text-align: right;
+  color: #727b86;
+  font-size: 21px;
+  padding-bottom: 10px;
+  border-bottom: dotted 1px;
+}
+
+.calc-typed {
+  margin-top: 20px;
+  font-size: 45px;
+  text-align: right;
+  color: #333333;
+}
+
+.calc-button-row {
+  width: 100%;
+  background: #ffffff;
+  cursor: default;
+}
+
+.button {
+  width: 25%;
+  background: #ffffff;
+  color: #425062;
+  padding: 20px;
+  display: inline-block;
+  font-size: 25px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: -4px;
+  border-right: solid 2px #ffffff;
+  border-bottom: solid 2px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.button.l {
+  color: #425062;
+  background: #ffffff;
+}
+
+.button.c {
+  color: #425062;
+  background: #ffffff;
+}
+button.e {
+  color: #425062;
+  background: #ffffff;
+}
+
+.button:hover {
+  background: #c2f0fc;
+  /*transform: rotate(1deg);*/
+}
+
+.button.c:hover {
+  background: #ff7272;
+  color: #fff;
+}
+
+.button.l:hover {
+  background: #e0b612;
+  color: #fff;
+}
+.button.e:hover {
+  background: #79bac1;
+  color: #fff;
+}
+
+.blink-me {
+  color: #404d5e;
+}
+
+.label {
+  position: fixed;
+  top: 0%;
+  left: 80%;
+  margin: 2vw;
+  font-size: 2.5vw;
+  text-shadow: 2px 2px 15px #404d5e;
+  color: #1b262c;
+  font-weight: bold;
+  text-align: right;
+}
+
+.footer {
+  position: fixed;
+  top: 90%;
+  left: 0%;
+  margin: 2vw;
+  font-size: 1vw;
+  color: #425062;
+  font-weight: italic;
+  text-align: left;
+}
+.footer a {
+  text-decoration: none;
+  color: #425062;
+}
+.righter {
+  position: fixed;
+  top: 90%;
+  left: 85%;
+  margin: 2vw;
+  font-size: 1vw;
+  color: #425062;
+  font-weight: italic;
+  text-align: right;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5vw;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 1vw;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0%;
+  transition: opacity 1.5s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
