@@ -1,2 +1,2 @@
 # Calculator
-Typical Calculator Wepb Application
+Typical Calculator Web Application
